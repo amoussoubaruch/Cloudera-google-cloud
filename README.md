@@ -54,6 +54,9 @@ $ yum install postgresql-server.x86_64
 
 > Configuration du fichier  /etc/hosts sur chaque machine 
 
+```sh
+$ vi /etc/hosts    # Ouvrir le fichier et ajouter les ip et nom de machines  
+```
 
 
 
