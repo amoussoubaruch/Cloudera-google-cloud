@@ -43,5 +43,18 @@ $ service sshd restart                              # Restart the sshd service
 $ yum install java-1.8.0-openjdk        # Java 8
 ```
 
+> Installation de postgresql 
+
+```sh
+$ yum install postgresql-server.x86_64
+```
+
+> Prerequis installation cloudera : http://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_ig_cm_requirements.html#cmig_topic_4_1
+
+
+> Configuration du fichier  /etc/hosts sur chaque machine 
+
+
+
 
 
