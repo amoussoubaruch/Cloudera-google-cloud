@@ -40,7 +40,6 @@ $ service sshd restart                              # Restart the sshd service
 > Installation de java 
 
 ```sh
-$ yum install java-1.7.0-openjdk-devel  # Java 7
 $ yum install java-1.8.0-openjdk        # Java 8
 ```
 
