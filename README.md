@@ -60,4 +60,4 @@ $ vi /etc/hosts    # Ouvrir le fichier et ajouter les ip et nom de machines
 
 
 
-
+> 
