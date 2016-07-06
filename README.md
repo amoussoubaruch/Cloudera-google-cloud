@@ -1,5 +1,7 @@
 # Cloudera-google-cloud
 
+> Tuto : http://www.cloudera.com/documentation/enterprise/5-6-x.html
+
 1. Node installation
 
 > Passer en mode root
@@ -148,3 +150,5 @@ $ ./cloudera-manager-installer.bin
 ```sh
 $ service cloudera-scm-server status
 ```
+
+
