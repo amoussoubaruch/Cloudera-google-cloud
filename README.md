@@ -51,6 +51,16 @@ $ yum install postgresql-server.x86_64
 
 > Prerequis installation cloudera : http://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_ig_cm_requirements.html#cmig_topic_4_1
 
+> Configurer seLinux
+
+```sh
+$ getenforce                            # Voir quelle est la config actuelle
+$ vim /etc/selinux/config               # change to permissive permissive
+$ setenforce 0                          # run the following command to disable SELinux immediately
+$ reboot                                # Si la modification ne prend pas immédiatement effet
+```
+
+> https://www.cloudera.com/documentation/enterprise/5-5-x/topics/install_cdh_disable_selinux.html
 
 > Configuration du fichier  /etc/hosts sur chaque machine 
 
@@ -87,12 +97,35 @@ $ ssh-copy-id -i /root/.ssh/id_rsa.pub root@cloudera2.c.cloudera-1363.internal  
 $ ssh-copy-id -i /root/.ssh/id_rsa.pub root@cloudera3.c.cloudera-1363.internal    # Copy key to node 2
 $ ssh-copy-id -i /root/.ssh/id_rsa.pub root@cloudera4.c.cloudera-1363.internal     # Copy key to node 3
 ```
+> Configurer le fichier  /etc/sysconfig/network et rajouter le nom de la machine
+
+```sh
+$ vi /etc/sysconfig/network
+```
 
 > Télécharger et lancer cloudera manager server sur le master node
 
 1. Téléchargement 
 
 ```sh
-$ 
+$ wget https://archive.cloudera.com/cm5/installer/5.7.0/cloudera-manager-installer.bin
 ```
+
+2. Donner les droits d'exécution sur au fichier 
+
+```sh
+$ chmod u+x cloudera-manager-installer.bin
+```
+
+3. Lancer cloudera manager installer
+
+```sh
+$ ./cloudera-manager-installer.bin
+```
+
+> On a les images suivantes (Cliquer sur next --> next ...)
+
+![MetaStore remote database](https://github.com/amoussoubaruch/hortonworks---Google-Cloud/blob/master/Img/img3.png)
+
+![MetaStore remote database](https://github.com/amoussoubaruch/hortonworks---Google-Cloud/blob/master/Img/img4.png)
 
