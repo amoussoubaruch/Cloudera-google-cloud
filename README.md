@@ -102,6 +102,14 @@ $ ssh-copy-id -i /root/.ssh/id_rsa.pub root@cloudera4.c.cloudera-1363.internal  
 ```sh
 $ vi /etc/sysconfig/network
 ```
+> Destactiver iptable
+
+```sh
+$ /etc/init.d/iptables stop
+$ /etc/init.d/ip6tables stop
+$ chkconfig iptables off
+$ chkconfig ip6tables off
+```
 
 > Télécharger et lancer cloudera manager server sur le master node
 
@@ -135,4 +143,8 @@ $ ./cloudera-manager-installer.bin
 
 > Fichier log de démarage : tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
 
+> Vérifier si le serveur fonctionne 
 
+```sh
+$ service cloudera-scm-server status
+```
