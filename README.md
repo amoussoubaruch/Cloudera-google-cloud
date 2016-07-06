@@ -133,7 +133,6 @@ $ ./cloudera-manager-installer.bin
 
 ![MetaStore remote database](https://github.com/amoussoubaruch/hortonworks---Google-Cloud/blob/master/Img/img5.png)
 
-
-
+> Fichier log de démarage : tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
 
 
