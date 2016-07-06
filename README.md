@@ -129,3 +129,11 @@ $ ./cloudera-manager-installer.bin
 
 ![MetaStore remote database](https://github.com/amoussoubaruch/hortonworks---Google-Cloud/blob/master/Img/img4.png)
 
+> Lorsque tous les packages sont bien installés 
+
+![MetaStore remote database](https://github.com/amoussoubaruch/hortonworks---Google-Cloud/blob/master/Img/img5.png)
+
+
+
+
+
