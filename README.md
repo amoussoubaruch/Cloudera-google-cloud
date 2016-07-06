@@ -59,9 +59,19 @@ $ vi /etc/hosts    # Ouvrir le fichier et ajouter les ip et nom de machines
 ```
 ![MetaStore remote database](https://github.com/amoussoubaruch/hortonworks---Google-Cloud/blob/master/Img/img1.png)
 
+> Ajouter l'ulisisateur hadoop avec les droits root
+
+```sh
+$ useradd hadoop     # Ajout de l'utilisateur haddop
+$ passwd hadoop      # Changer son mot de passe
+$ visudo             # Donner les droits root à l'utilisateur hadoop (Voir grapphe ci dessous)
+```
+
+![MetaStore remote database](https://github.com/amoussoubaruch/hortonworks---Google-Cloud/blob/master/Img/img2.png)
+
 > Configuration SSH entre le master node et les namenodes
 
-> On name node generate key 
+> Génération de la clé privé SSH  
 
 ```sh
 $ ssh-keygen  # Mettre le paramètre çi dessous
@@ -72,9 +82,17 @@ $ ssh-keygen  # Mettre le paramètre çi dessous
 > Copie de la clé sur tous les autres noeuds y compris le name node 
 
 ```sh
-$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@hdp1.c.mapr-1355.internal    # Name node
-$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@hdp2.c.mapr-1355.internal     # Copy key to node 1 
-$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@hdp3.c.mapr-1355.internal    # Copy key to node 2
-$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@hdp4.c.mapr-1355.internal     # Copy key to node 3
-$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@hdp5.c.mapr-1355.internal    # Copy key to node 4
+$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@cloudera1.c.cloudera-1363.internal    # Name node
+$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@cloudera2.c.cloudera-1363.internal     # Copy key to node 1 
+$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@cloudera3.c.cloudera-1363.internal    # Copy key to node 2
+$ ssh-copy-id -i /root/.ssh/id_rsa.pub root@cloudera4.c.cloudera-1363.internal     # Copy key to node 3
 ```
+
+> Télécharger et lancer cloudera manager server sur le master node
+
+1. Téléchargement 
+
+```sh
+$ 
+```
+
